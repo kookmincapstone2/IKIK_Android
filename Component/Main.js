@@ -15,21 +15,21 @@ class Main extends Component {
   render() {
     return (
       <View style={styles.mainView}>
-        <Image source={LogoImg} />
-        <Text>Welcome</Text>
-        <TextInput placeholder="Id" />
-        <TextInput placeholder="Password" />
+        <Image source={LogoImg} style = {{ marginVertical: 10}}/>
+        <Text style = {{ marginVertical: 10}}> Welcome</Text>
+        <TextInput placeholder="ID" style = {styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' />
+        <TextInput placeholder="Password" style = {styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)'/>
         <Button
           title="Login"
           onPress={() => Alert.alert('test')}
           color="#87ceaf"
-          width="50"
+          style = {{ marginVertical: 30, width: 50, height: 30}}
         />
         <Button
           title="Sing up"
           onPress={() => Alert.alert('test')}
           color="#87ceaf"
-          width="50"
+          style = {{ marginVertical: 30, width: 50, height: 30}}  
         />
       </View>
     );
@@ -39,11 +39,18 @@ class Main extends Component {
 const styles = StyleSheet.create({
   mainView: {
     flex: 1,
-    paddingTop: 50,
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 18,
   },
+  inputBox: {
+      width: 200,
+      height: 30,
+      marginVertical: 10,
+      backgroundColor: '#c7ffef',
+      paddingHorizontal: 15,
+      borderRadius: 25,
+  }
 });
 
 export default Main;
