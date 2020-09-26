@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TextInput, Button, Alert, Image} from 'react-native';
-import Main from "./Component/Main";
+import Login from "./Page/Login";
 
 import {
   Header,
@@ -17,6 +17,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Form from "./Component/Form";
 
 // const LogoImg = require("./img/Mainlogo.png")
 
@@ -24,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <View style={styles.mainView}>
-        <Main/>
+        <Login/>
       </View>
     );
   }
