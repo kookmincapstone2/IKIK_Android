@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import Form from '../Component/Form.js';
+// import {Actions} from 'react-native-router-flux';
 const LogoImg = require('../img/Mainlogo.png');
 
 class Login extends Component<{}> {
-  //   singup() {
-  //     Actions.singup();
-  //   }
+    // singup() {
+    //   Actions.singup();
+    // }
   render() {
     return (
       <View style={styles.container}>
@@ -27,7 +28,7 @@ class Login extends Component<{}> {
         <Form type="Login"/>
         <View style={styles.signupCont}>
           <Text style={styles.signupText}>Don't have an account yet? </Text>
-          <TouchableOpacity><Text style={styles.signupBtn}>Sing Up</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate("Signup")}><Text style={styles.signupBtn}>Sing Up</Text></TouchableOpacity>
         </View>
       </View>
     );

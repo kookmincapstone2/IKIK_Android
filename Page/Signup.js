@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import Form from '../Component/Form.js';
+import SignupForm from '../Component/SingupForm';
 const LogoImg = require('../img/Mainlogo.png');
 
 class Login extends Component<{}> {
@@ -13,7 +14,7 @@ class Login extends Component<{}> {
         <Image
           source={LogoImg}
           style={{
-            marginTop: 150,
+            marginTop: 70,
             width: 100,
             height: 110,
             marginBottom: 10,
@@ -24,7 +25,8 @@ class Login extends Component<{}> {
           Welcome to IKIK!
         </Text>
         {/*logo text*/}
-        <Form type="Singup"/>
+        {/* <Form type="Singup"/> */}
+        <SignupForm/>
         <View style={styles.signupCont}>
           <Text style={styles.signupText}>Already have an account? </Text>
           <Text style={styles.signupBtn}>Sing In</Text>
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    paddingVertical: 10,
+    // paddingVertical: 10,
     flexDirection: 'row',
   },
   signupText: {

@@ -16,4 +16,28 @@ class Routes extends Component<{}> {
     }
 }
 
-export default Routes;
+// export default Routes;
+// import 'react-native-gesture-handler';
+// import React, {Component} from 'react';
+// import { NavigationContainer} from '@react-navigation/native';
+// import { createStackNavigator} from '@react-navigation/stack';
+
+// import Login from './Page/Login';
+// import Signup from './Page/Signup';
+
+// const AuthStack = createStackNavigator ();
+
+// class Routes extends Component<{}> {
+//   render() {
+//     return (
+//       <NavigationContainer>
+//         <AuthStack.Navigator>
+//           <AuthStack.Screen name="Login" component={Login} />
+//           <AuthStack.Screen name="Signup" component={Signup} />
+//         </AuthStack.Navigator>
+//       </NavigationContainer>
+//     );
+//   }
+// }
+
+// export default Routes;

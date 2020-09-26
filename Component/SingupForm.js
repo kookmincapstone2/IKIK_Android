@@ -9,28 +9,47 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-class Form extends Component<{}> {
-
-  // constructor(props) {
-  //   super(props)
-  // }
-  render() { 
+class SignupForm extends Component<{}> {
+  constructor(props) {
+    super(props);
+  }
+  render() {
     return (
       <View style={styles.container}>
         <TextInput
           placeholder="ID"
           style={styles.inputBox}
-          underlineColorAndroid="rgba(0,0,0,0)"
+          underlineColorAndroid="rgba(0,0,0,0.3)"
+        />
+        <TextInput
+          placeholder="Email"
+          style={styles.inputBox}
+          underlineColorAndroid="rgba(0,0,0,0.3"
         />
         <TextInput
           placeholder="Password"
           secureTextEntry={true}
           style={styles.inputBox}
-          underlineColorAndroid="rgba(0,0,0,0)"
+          underlineColorAndroid="rgba(0,0,0,0.3)"
+        />
+        <TextInput
+          placeholder="name"
+          style={styles.inputBox}
+          underlineColorAndroid="rgba(0,0,0,0.3)"
+        />
+        <TextInput
+          placeholder="studend_id"
+          style={styles.inputBox}
+          underlineColorAndroid="rgba(0,0,0,0.3)"
+        />
+        <TextInput
+          placeholder="phone_number"
+          style={styles.inputBox}
+          underlineColorAndroid="rgba(0,0,0,0.3)"
         />
         <TouchableOpacity
           title="Log In"
-          onPress={() => navigation.navigate("Login")}
+          onPress={() => Alert.alert('test')}
           color="#87ceaf"
           style={styles.button}>
           <Text style={styles.buttonText}>{this.props.type}</Text>
@@ -62,11 +81,11 @@ const styles = StyleSheet.create({
     height: 50,
   },
   buttonText: {
-    color: "#87ceaf",
+    color: '#87ceaf',
     fontSize: 16,
     fontWeight: '700',
     textAlign: 'center',
-  }
+  },
 });
 
-export default Form;
+export default SignupForm;
