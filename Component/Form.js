@@ -6,9 +6,14 @@ import {
   TextInput,
   Button,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
 
 class Form extends Component<{}> {
+
+  // constructor(props) {
+  //   super(props)
+  // }
   render() {
     return (
       <View style={styles.container}>
@@ -23,12 +28,13 @@ class Form extends Component<{}> {
           style={styles.inputBox}
           underlineColorAndroid="rgba(0,0,0,0)"
         />
-        <Button
+        <TouchableOpacity
           title="Log In"
           onPress={() => Alert.alert('test')}
           color="#87ceaf"
-          style={styles.button}
-        />
+          style={styles.button}>
+          <Text style={styles.buttonText}>{this.props.type}</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -51,13 +57,16 @@ const styles = StyleSheet.create({
   },
   button: {
     borderRadius: 25,
-    fontWeight: '500',
-    textAlign: 'center',
     marginVertical: 30,
     width: 300,
     height: 50,
-    fontWeight: '700',
   },
+  buttonText: {
+    color: "#87ceaf",
+    fontSize: 16,
+    fontWeight: '700',
+    textAlign: 'center',
+  }
 });
 
 export default Form;

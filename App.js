@@ -1,31 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TextInput, Button, Alert, Image} from 'react-native';
-import Login from "./Page/Login";
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import Form from "./Component/Form";
-
-// const LogoImg = require("./img/Mainlogo.png")
+import {View, StyleSheet} from 'react-native';
+import Routes from "../IKIK_Front/Routes";
+// import Login from "./Page/Login";
 
 class App extends Component {
   render() {
     return (
       <View style={styles.mainView}>
-        <Login/>
+        <Routes/>
+        {/* <Login/> */}
       </View>
     );
   }

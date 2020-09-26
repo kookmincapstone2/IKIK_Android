@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import Form from '../Component/Form.js';
 const LogoImg = require('../img/Mainlogo.png');
 
@@ -24,10 +24,10 @@ class Login extends Component<{}> {
           Welcome to IKIK!
         </Text>
         {/*logo text*/}
-        <Form type="Login"/>
+        <Form type="Singup"/>
         <View style={styles.signupCont}>
-          <Text style={styles.signupText}>Don't have an account yet? </Text>
-          <TouchableOpacity><Text style={styles.signupBtn}>Sing Up</Text></TouchableOpacity>
+          <Text style={styles.signupText}>Already have an account? </Text>
+          <Text style={styles.signupBtn}>Sing In</Text>
         </View>
       </View>
     );
