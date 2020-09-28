@@ -1,14 +1,15 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import React from 'react';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import Form from '../Component/Form.js';
 import SignupForm from '../Component/SingupForm';
+import Login from "./Login";
 const LogoImg = require('../img/Mainlogo.png');
 
-class Login extends Component<{}> {
+const Signup = ({navigation}) => {
   //   singup() {
   //     Actions.singup();
   //   }
-  render() {
+
     return (
       <View style={styles.container}>
         <Image
@@ -29,11 +30,12 @@ class Login extends Component<{}> {
         <SignupForm/>
         <View style={styles.signupCont}>
           <Text style={styles.signupText}>Already have an account? </Text>
+          <TouchableOpacity onPress = {()=> navigation.navigate('Login')}>
           <Text style={styles.signupBtn}>Sing In</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
-  }
 }
 
 const styles = StyleSheet.create({
@@ -60,4 +62,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Signup;

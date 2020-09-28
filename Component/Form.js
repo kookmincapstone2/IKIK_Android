@@ -30,7 +30,6 @@ class Form extends Component<{}> {
         />
         <TouchableOpacity
           title="Log In"
-          onPress={() => navigation.navigate("Login")}
           color="#87ceaf"
           style={styles.button}>
           <Text style={styles.buttonText}>{this.props.type}</Text>
