@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import Form from '../Component/Form.js';
 import Signup from "../Page/Signup";
+import Class from "../Page/class";
 const LogoImg = require('../img/Mainlogo.png');
 
 const Login = ({navigation}) => {
@@ -24,6 +25,9 @@ const Login = ({navigation}) => {
         <Text style={styles.signupText}>Don't have an account yet? </Text>
         <TouchableOpacity onPress = {()=> navigation.navigate('Signup')}>
           <Text style={styles.signupBtn}>Sing Up</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress= {()=> navigation.navigate('AddClass')}>
+          <Text style={styles.singupBtn}>AddClass</Text>
         </TouchableOpacity>
       </View>
     </View>
