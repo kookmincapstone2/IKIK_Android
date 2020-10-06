@@ -22,6 +22,7 @@ const Class = () => {
         <AddClass2 submitHandler={submitHandler} />
         <FlatList
           data={addClass}
+          style={styles.item}
           renderItem={({item}) => (
             <AddClass item={item} pressHandler={pressHandler} />
           )}
@@ -31,6 +32,14 @@ const Class = () => {
   );
 };
 
-{/* const styles =StyleSheet.create({}) */}
+const styles = StyleSheet.create({
+  item: {
+    marginBottom: 10,
+    paddingHorizontal: 8,
+    paddingVertical: 6,
+    borderBottomWidth: 1,
+    borderBottomColor: '#b9ffe0',
+  },
+});
 
 export default Class;
